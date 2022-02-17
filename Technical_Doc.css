@@ -1,0 +1,100 @@
+
+.top_bar{
+    background-color: rgb(231, 184, 96);
+    height: 10vh;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-align: center;
+}
+header{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+p{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+.js{
+    width: 100px;
+    height: 100%;
+}
+.body{
+    background-color: orange;
+    
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1px;
+    grid-template-areas: 'a b b'
+                         'a b b'
+                         'a b b';
+}
+#nav,#main{
+    height: 98vh;
+    background-color: rgb(231, 184, 96);
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: auto;
+    padding: 5px;
+    
+}
+#nav{
+    grid-area: a;
+}
+#main{
+    grid-area: b;
+}
+#navbar{
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+.wlink{
+    text-decoration: none;
+}
+.wlink:hover{
+    text-decoration: underline;
+    font-size: 18px;
+}
+a:not(.wlink){
+    background-color: orange;
+    border: 1px solid black;
+    padding: 1px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size:large;
+}
+
+a:not(.wlink):hover{
+    background-color: rgb(114, 98, 69);
+}
+a:not(.wlink):link{
+    color: black;
+}
+a:not(.wlink):visited{
+    color: rgb(0, 0, 0);
+}
+a:active{
+    color: bisque;
+}
+.code{
+    background-color: rgb(252, 200, 105);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(59, 59, 121);
+}
+@media screen and (max-width:655px){
+    .grid_container{
+        grid-template-areas: 'a a a'
+                             'b b b'
+                             'b b b';
+    }
+    #nav{
+        height: 30vh;
+    }
+}
